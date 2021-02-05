@@ -1,0 +1,4 @@
+git add .			Actualiza los contenidos de git con github
+git status			Verifica estado de git con github
+git commit -m "Name"		Empaquetar el contenido que se va a subir
+git push -u origin master	Subir paquetes(a la branch "master")
