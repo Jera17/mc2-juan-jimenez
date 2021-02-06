@@ -1,0 +1,201 @@
+public class Program
+{
+public static void Main()
+{
+Double[] A = new Double[5];
+
+for (int i = 0; i < 5; i++)
+{
+A[i] = 0;
+}
+
+for (int i = 0; i < 5; i++)
+{
+
+bool rep = false;
+Console.WriteLine("Ingrese numero del conjunto A");
+double Acheck = Int32.Parse(Console.ReadLine());
+for (int ii = 0; ii < 5; ii++)
+{
+if (A[i] == Acheck)
+{
+rep = true;
+}
+}
+
+if (rep == false)
+{
+A[i] = Acheck;
+}
+}
+
+Double[] B = new Double[5];
+for (int i = 0; i < 5; i++)
+{
+B[i] = 0;
+}
+
+for (int i = 0; i < 5; i++)
+{
+bool rep = false;
+Console.WriteLine("Ingrese elemento de B");
+double Bcheck = Int32.Parse(Console.ReadLine());
+for (int ii = 0; ii < 5; ii++)
+{
+if (B[i] == Bcheck)
+{
+rep = true;
+}
+}
+
+if (rep == false)
+{
+B[i] = Bcheck;
+}
+}
+
+Double[] C = new Double[10];
+for (int i = 0; i < 10; i++)
+{
+C[i] = 0;
+}
+
+bool ciclo = false;
+
+do
+
+
+{
+ciclo = false;
+for (int i = 0; i < 10; i++)
+{
+C[i] = 0;
+}
+
+
+
+
+
+Console.WriteLine("(1) Union. (2) Interseccion. (3) //Diferencia.// (4) //Diferencia simétrica.// (5) Terminar. ");
+int x = Int32.Parse(Console.ReadLine());
+
+switch (x)
+{
+
+
+case 1:
+for (int i = 0; i < 5; i++)
+{
+for (int ii = 0; ii < 10; ii++)
+{
+if (C[ii] == 0)
+{
+C[ii] = A[i];
+break;
+}
+}
+}
+
+for (int i = 0; i < 5; i++)
+{
+for (int ii = 0; ii < 10; ii++)
+{
+if (C[ii] == 0)
+{
+C[ii] = B[i];
+break;
+}
+}
+}
+
+Console.WriteLine("Elementos de A u B");
+for (int i = 0; i < 10; i++)
+{
+bool rep = false;
+if (C[i] != 0)
+{
+for (int ii = 0; ii < i; ii++)
+{
+if (C[i] == C[ii] && i != ii)
+{
+rep = true;
+}
+}
+if (!rep)
+{
+ Console.WriteLine(C[i]);
+}
+}
+}
+
+break;
+
+
+
+case 2:
+for (int i = 0; i < 5; i++)
+{
+for (int ii = 0; ii < 5; ii++)
+{
+if (A[i] == 0 || B[ii] == 0)
+{
+break;
+}
+
+if (A[i] == B[ii])
+{
+for (int iii = 0; iii < 9; iii++)
+{
+if (C[iii] == 0)
+{
+C[iii] = A[i];
+break;
+}
+}
+}
+}
+}
+
+Console.WriteLine("Elementos de A n B");
+for (int i = 0; i < 10; i++)
+{
+bool rep = false;
+if (C[i] != 0)
+{
+for (int ii = 0; ii < i; ii++)
+{
+if (C[i] == C[ii] && i != ii)
+{
+rep = true;
+}
+}
+if (!rep)
+{
+ Console.WriteLine(C[i]);
+}
+}
+}
+
+break;
+
+
+
+case 3:
+
+
+break;
+
+
+case 4:
+
+break;
+
+case 5:
+ciclo = true;
+break;
+
+}
+}
+while (!ciclo);
+}
+}
