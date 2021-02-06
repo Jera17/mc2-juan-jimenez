@@ -1,3 +1,5 @@
+cd "C:\Users\Juan Jimenez\Desktop\Git"
+
 git add .			Actualiza los contenidos de git con github
 git status			Verifica estado de git con github
 git commit -m "Name"		Empaquetar el contenido que se va a subir
